@@ -38,11 +38,11 @@ const AboutPage: React.FC = () => {
               <div className="lg:w-1/2 flex flex-col gap-8">
                  <div className="rounded-[32px] overflow-hidden shadow-xl h-64 md:h-80 relative">
                     {/* Construction workers */}
-                    <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?q=80&w=1000" alt="Construction team" className="w-full h-full object-cover" />
+                    <img src="./public/images/WhatsApp Image 2025-11-15 at 10.38.05 (2).jpeg" alt="Construction team" className="w-full h-full object-cover" />
                  </div>
                  <div className="rounded-[32px] overflow-hidden shadow-xl h-64 md:h-80 relative">
                     {/* Dark parking */}
-                    <img src="https://images.unsplash.com/photo-1590674899505-1c5c41949430?q=80&w=1000" alt="Underground parking" className="w-full h-full object-cover" />
+                    <img src="./public/images/WhatsApp Image 2025-11-15 at 10.38.02.jpeg" alt="Underground parking" className="w-full h-full object-cover" />
                  </div>
               </div>
           </div>
@@ -56,66 +56,68 @@ const AboutPage: React.FC = () => {
                {/* Left Column: Tall Image */}
                <div className="h-[500px] lg:h-[800px] rounded-[32px] overflow-hidden shadow-lg">
                   {/* Building + Road work */}
-                  <img src="https://images.unsplash.com/photo-1592833353528-912f275eb016?q=80&w=1000" alt="Complex project" className="w-full h-full object-cover" />
+                  <img src="./public/images/WhatsApp Image 2025-11-15 at 10.37.59 (2).jpeg" alt="Complex project" className="w-full h-full object-cover" />
                </div>
 
                {/* Right Column: 3 Stacked Images */}
                <div className="flex flex-col gap-6 h-auto lg:h-[800px]">
                    <div className="flex-1 rounded-[32px] overflow-hidden shadow-lg min-h-[200px]">
                       {/* Bike path */}
-                      <img src="https://images.unsplash.com/photo-1621905252507-b35492cc2d31?q=80&w=800" alt="Bike path" className="w-full h-full object-cover" />
+                      <img src="./public/images/WhatsApp Image 2025-11-15 at 10.37.56 (2).jpeg" alt="Bike path" className="w-full h-full object-cover" />
                    </div>
                    <div className="flex-1 rounded-[32px] overflow-hidden shadow-lg min-h-[200px]">
                       {/* Close up lines */}
-                      <img src="https://images.unsplash.com/photo-1566242339501-1bb7921878d6?q=80&w=800" alt="Marking detail" className="w-full h-full object-cover" />
+                      <img src="./public/images/WhatsApp Image 2025-11-15 at 10.37.59 (1).jpeg" alt="Marking detail" className="w-full h-full object-cover" />
                    </div>
                    <div className="flex-1 rounded-[32px] overflow-hidden shadow-lg min-h-[200px]">
                       {/* Parking lot */}
-                      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800" alt="Parking lot" className="w-full h-full object-cover" />
+                      <img src="./public/images/WhatsApp Image 2025-11-15 at 10.38.01.jpeg" alt="Parking lot" className="w-full h-full object-cover" />
                    </div>
                </div>
             </div>
          </div>
       </section>
 
-      {/* Feature Section (Yellow Banner 03) */}
-      <section className="py-20 relative overflow-hidden">
-         <div className="container mx-auto px-4 md:px-8">
-            <div className="flex flex-col md:flex-row gap-8 mb-20">
+      {/* Feature Section - Three Cards on Parking Background - Точно как на фото */}
+      <section className="relative w-full max-w-[1200px] h-[600px] mx-auto bg-cover bg-center bg-no-repeat flex items-end rounded-3xl overflow-hidden" 
+               style={{backgroundImage: 'url(/images/BG%20Image.png)'}}>
+         
+         <div className="w-full px-6 lg:px-12 relative z-10 pb-12 lg:pb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                
-               {/* Feature Card 1 */}
-               <div className="bg-slate-50 p-8 rounded-[32px] max-w-sm">
-                  <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mb-6">
-                     <Briefcase className="w-6 h-6 text-black" />
+               {/* Карточка 1 - Профессиональное выполнение */}
+               <div className="bg-white p-8 lg:p-10 rounded-[24px] shadow-2xl">
+                  <div className="w-16 h-16 lg:w-20 lg:h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-6">
+                     <Briefcase className="w-8 h-8 lg:w-10 lg:h-10 text-black" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">Профессиональное выполнение</h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">
+                  <h3 className="text-xl lg:text-2xl font-bold mb-4 text-black leading-tight">Профессиональное выполнение</h3>
+                  <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
                      Наши специалисты проходят строгую подготовку и обладают реальным опытом, что гарантирует аккуратность каждой разметки.
                   </p>
                </div>
 
-               {/* Feature Card 2 */}
-               <div className="bg-slate-50 p-8 rounded-[32px] max-w-sm md:mt-12">
-                  <div className="w-12 h-12 bg-[#8B7355] rounded-full flex items-center justify-center mb-6">
-                     <Clock className="w-6 h-6 text-white" />
+               {/* Карточка 2 - Быстро и надёжно */}
+               <div className="bg-white p-8 lg:p-10 rounded-[24px] shadow-2xl">
+                  <div className="w-16 h-16 lg:w-20 lg:h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-6">
+                     <Clock className="w-8 h-8 lg:w-10 lg:h-10 text-black" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">Быстро и надёжно</h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">
+                  <h3 className="text-xl lg:text-2xl font-bold mb-4 text-black leading-tight">Быстро и надёжно</h3>
+                  <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
                      Оперативно выезжаем и выполняем работы по дорожной разметке без задержек.
                   </p>
                </div>
 
-            </div>
-
-            {/* Yellow Banner 03 */}
-            <div className="flex justify-end">
-               <div className="bg-yellow-400 p-10 rounded-[32px] max-w-md w-full shadow-2xl">
-                  <div className="text-5xl font-bold text-white mb-4 opacity-90">03</div>
-                  <h3 className="text-xl font-bold text-black mb-2">Гарантия результата</h3>
-                  <p className="text-black/80 text-sm leading-relaxed">
-                     Мы выполняем разметку, сдаём объект в срок, выдаём гарантию и обеспечиваем постгарантийное обслуживание.
+               {/* Карточка 3 - Прозрачные цены */}
+               <div className="bg-white p-8 lg:p-10 rounded-[24px] shadow-2xl">
+                  <div className="w-16 h-16 lg:w-20 lg:h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-6">
+                     <span className="text-2xl lg:text-3xl font-bold text-black">₽</span>
+                  </div>
+                  <h3 className="text-xl lg:text-2xl font-bold mb-4 text-black leading-tight">Прозрачные цены</h3>
+                  <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
+                     Без скрытых платежей и лишних расходов. Мы всегда открыто обсуждаем стоимость и детали заказа.
                   </p>
                </div>
+
             </div>
          </div>
       </section>
@@ -163,7 +165,7 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Contact Section */}
       <section className="py-32 bg-[#0a0a0a] relative overflow-hidden text-white">
          <div className="absolute inset-0 opacity-20 pointer-events-none">
             <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">

@@ -8,25 +8,25 @@ const SERVICE_CARDS = [
     id: 1,
     title: 'Разметка холодным пластиком',
     description: 'Используем холодный пластик для создания износостойкой разметки на любых дорожных покрытиях долговечность',
-    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop',
+    image: '/images/typlvhOExHu3qEVUwC9ton1Y.avif',
   },
   {
     id: 2,
     title: 'Сигнальная разметка помещений',
     description: 'Обустроим сигнальную разметку для складов и цехов. Яркая разметка — для безопасности сотрудников и оптимизации процессов.',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop',
+    image: '/images/WhatsApp Image 2025-11-15 at 10.38.00.jpeg',
   },
   {
     id: 3,
     title: 'Разметка парковок и паркингов',
     description: 'Разметка мест и зон парковок в СПб и области по ГОСТ: современные материалы, точные линии, чёткие знаки.',
-    image: 'https://images.unsplash.com/photo-1590674899505-1c5c41949430?q=80&w=800&auto=format&fit=crop',
+    image: '/images/WhatsApp Image 2025-11-15 at 10.38.06 (3).jpeg',
   },
   {
     id: 4,
-    title: 'Разметка парковок и паркингов',
-    description: 'Разметка мест и зон парковок в СПб и области по ГОСТ: современные материалы, точные линии, чёткие знаки.',
-    image: 'https://images.unsplash.com/photo-1566242339501-1bb7921878d6?q=80&w=800&auto=format&fit=crop',
+    title: 'Разметка дорог и тротуаров',
+    description: 'Профессиональная разметка дорожного полотна и пешеходных зон с использованием качественных материалов по ГОСТу.',
+    image: '/images/WhatsApp Image 2025-11-15 at 10.38.05 (2).jpeg',
   }
 ];
 
@@ -90,9 +90,9 @@ const ServicesPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                {SERVICE_CARDS.map((service) => (
                  <div key={service.id} className="bg-white border border-slate-100 rounded-[32px] p-4 flex flex-col md:flex-row gap-6 shadow-sm hover:shadow-xl transition-shadow duration-300">
-                    {/* Изображение */}
-                    <div className="w-full md:w-5/12 h-64 md:h-auto shrink-0 rounded-[24px] overflow-hidden">
-                       <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
+                    {/* Изображение с фиксированным размером */}
+                    <div className="w-full md:w-5/12 h-64 md:h-[280px] shrink-0 rounded-[24px] overflow-hidden">
+                       <img src={service.image} alt={service.title} className="w-full h-full object-cover object-center" />
                     </div>
                     {/* Контент */}
                     <div className="flex flex-col justify-between py-2 pr-4">
@@ -137,9 +137,9 @@ const ServicesPage: React.FC = () => {
 
                {/* Правая часть: Картинка с плашками */}
                <div className="lg:w-7/12 relative">
-                  <div className="rounded-[40px] overflow-hidden shadow-2xl relative h-[500px] w-full">
+                  <div className="rounded-[24px] lg:rounded-[40px] overflow-hidden shadow-2xl relative h-[450px] md:h-[500px] w-full">
                      <img 
-                       src="https://images.unsplash.com/photo-1590674899505-1c5c41949430?q=80&w=1200" 
+                       src="/images/BG Image.png" 
                        alt="Road works context" 
                        className="w-full h-full object-cover" 
                      />
@@ -147,38 +147,38 @@ const ServicesPage: React.FC = () => {
                   </div>
 
                   {/* Плавающие карточки (Overlay Cards) */}
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-md flex flex-col gap-4 px-4">
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-[320px] md:max-w-md flex flex-col gap-3 md:gap-4 px-4">
                      
                      {/* Карточка 1 */}
-                     <div className="bg-white p-4 rounded-2xl shadow-lg flex items-center gap-4 transform -translate-x-8">
-                        <div className="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center shrink-0">
-                           <Clock className="w-5 h-5 text-black" />
+                     <div className="bg-white p-3 md:p-4 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-3 md:gap-4 transform md:-translate-x-8">
+                        <div className="w-9 h-9 md:w-10 md:h-10 bg-yellow-400 rounded-full flex items-center justify-center shrink-0">
+                           <Clock className="w-4 h-4 md:w-5 md:h-5 text-black" />
                         </div>
                         <div>
-                           <div className="font-bold text-sm">Круглосуточная</div>
-                           <div className="font-bold text-sm">поддержка 24/7</div>
+                           <div className="font-bold text-xs md:text-sm">Круглосуточная</div>
+                           <div className="font-bold text-xs md:text-sm">поддержка 24/7</div>
                         </div>
                      </div>
 
                      {/* Карточка 2 */}
-                     <div className="bg-white p-4 rounded-2xl shadow-lg flex items-center gap-4 transform translate-x-8">
-                        <div className="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center shrink-0">
-                           <CheckCircle className="w-5 h-5 text-black" />
+                     <div className="bg-white p-3 md:p-4 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-3 md:gap-4 transform md:translate-x-8">
+                        <div className="w-9 h-9 md:w-10 md:h-10 bg-yellow-400 rounded-full flex items-center justify-center shrink-0">
+                           <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-black" />
                         </div>
                         <div>
-                           <div className="font-bold text-sm">Быстрое и надёжное</div>
-                           <div className="font-bold text-sm">выполнение работ</div>
+                           <div className="font-bold text-xs md:text-sm">Быстрое и надёжное</div>
+                           <div className="font-bold text-xs md:text-sm">выполнение работ</div>
                         </div>
                      </div>
 
                      {/* Карточка 3 */}
-                     <div className="bg-white p-4 rounded-2xl shadow-lg flex items-center gap-4 transform -translate-x-4">
-                        <div className="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center shrink-0">
-                           <ShieldCheck className="w-5 h-5 text-black" />
+                     <div className="bg-white p-3 md:p-4 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-3 md:gap-4 transform md:-translate-x-4">
+                        <div className="w-9 h-9 md:w-10 md:h-10 bg-yellow-400 rounded-full flex items-center justify-center shrink-0">
+                           <ShieldCheck className="w-4 h-4 md:w-5 md:h-5 text-black" />
                         </div>
                         <div>
-                           <div className="font-bold text-sm">Опытные и проверенные</div>
-                           <div className="font-bold text-sm">специалисты</div>
+                           <div className="font-bold text-xs md:text-sm">Опытные и проверенные</div>
+                           <div className="font-bold text-xs md:text-sm">специалисты</div>
                         </div>
                      </div>
 
