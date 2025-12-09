@@ -9,9 +9,9 @@ import AboutPage from './components/AboutPage';
 import ServicesPage from './components/ServicesPage';
 import BlogPage from './components/BlogPage';
 import ContactPage from './components/ContactPage';
-
+import ProjectsPage from './components/ProjectsPage';
 // Define possible view states for pages
-type ViewState = 'home' | 'about' | 'services' | 'blog' | 'contact';
+type ViewState = 'home' | 'about' | 'services' | 'blog' | 'contact' | 'projects';
 
 export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -87,12 +87,12 @@ export default function App() {
         <div className="absolute inset-0 z-0">
           {/* USER: REPLACE THE SRC ATTRIBUTE BELOW TO CHANGE BACKGROUND PHOTO */}
           <img 
-            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2600&auto=format&fit=crop" 
+            src="public/images/bg_image.png" 
             alt="Hero Background" 
             className="w-full h-full object-cover"
           />
           {/* Dark overlay to ensure text readability over the image */}
-          <div className="absolute inset-0 bg-black/70"></div>
+          <div className="absolute inset-0 bg-black/50"></div>
         </div>
 
         {/* Abstract lines */}
@@ -188,7 +188,7 @@ export default function App() {
 
             <div className="lg:w-1/2 relative">
                <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl">
-                 <img src="https://images.unsplash.com/photo-1625246333195-0e48c084931a?q=80&w=1200" alt="Road works" className="w-full h-full object-cover" />
+                 <img src="public/images/home_about.jpeg" alt="Road works" className="w-full h-full object-cover" />
                  
                  <div className="absolute bottom-8 left-8 bg-[#1a1c20] text-white p-8 rounded-3xl max-w-[240px] hidden lg:block shadow-2xl border border-slate-800">
                     <div className="text-4xl font-bold mb-2">
@@ -316,11 +316,15 @@ export default function App() {
              </div>
           </div>
 
-          <div className="flex justify-center">
-            <button className="bg-yellow-400 hover:bg-yellow-300 text-black px-8 py-3 rounded-full text-sm font-bold uppercase transition-colors shadow-lg shadow-yellow-400/20">
+          <button 
+              onClick={() => {
+                setCurrentView('projects');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="bg-yellow-400 hover:bg-yellow-300 text-black px-8 py-3 rounded-full text-sm font-bold uppercase transition-colors shadow-lg shadow-yellow-400/20"
+            >
                Подробнее о проектах
             </button>
-          </div>
         </div>
       </section>
 
@@ -341,10 +345,10 @@ export default function App() {
            <div className="flex flex-col lg:flex-row gap-16 items-center">
              <div className="lg:w-1/2 w-full relative h-[400px] md:h-[500px]">
                  <div className="absolute top-0 left-0 w-[75%] h-[80%] rounded-3xl overflow-hidden shadow-lg z-10">
-                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800" className="w-full h-full object-cover" alt="Industrial marking" />
+                    <img src="public/images/about2.avif" className="w-full h-full object-cover" alt="Industrial marking" />
                  </div>
                  <div className="absolute bottom-0 right-0 w-[60%] h-[60%] rounded-3xl overflow-hidden shadow-2xl z-20 border-[8px] border-white">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800" className="w-full h-full object-cover" alt="Road marking detail" />
+                    <img src="public/images/about1.png" className="w-full h-full object-cover" alt="Road marking detail" />
                  </div>
              </div>
              
@@ -656,12 +660,13 @@ export default function App() {
       </header>
 
       {/* Main Content - Adjusted padding top for fixed header */}
-      <main className="pt-36">
+      <main className="pt-24">
          {currentView === 'home' && <HomeContent />}
          {currentView === 'about' && <AboutPage />}
          {currentView === 'services' && <ServicesPage />}
          {currentView === 'blog' && <BlogPage />}
          {currentView === 'contact' && <ContactPage />}
+          {currentView === 'projects' && <ProjectsPage />}
       </main>
 
       <footer className="bg-black text-white py-20 border-t border-white/10">
@@ -672,16 +677,8 @@ export default function App() {
                 <div className="lg:w-1/2 lg:pr-20 pb-12 lg:pb-0 relative z-10">
                     <div className="mb-12">
                         {/* Logo Approximation */}
-                        <div className="flex flex-col gap-4">
-                            <div className="w-16 h-16 relative">
-                                {/* Yellow Shape */}
-                                <svg viewBox="0 0 100 100" className="w-full h-full text-yellow-400 fill-current">
-                                    <path d="M10 90 L50 10 L90 90 Z" fill="none" stroke="currentColor" strokeWidth="4" />
-                                    {/* Abstract S or Arrow */}
-                                    <path d="M30 70 L50 30 L70 70" stroke="white" strokeWidth="4" fill="none" />
-                                </svg>
-                            </div>
-                            <div className="text-3xl font-bold text-white tracking-tight">Streetline</div>
+                         <div className="w-[67px] h-[71px] relative mb-1">
+                          <img src="public/images/logo.svg" alt="Streetline Logo" className="w-full h-full object-contain" />
                         </div>
                     </div>
 
