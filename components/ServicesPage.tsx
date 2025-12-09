@@ -139,7 +139,7 @@ const ServicesPage: React.FC = () => {
                <div className="lg:w-7/12 relative">
                   <div className="rounded-[24px] lg:rounded-[40px] overflow-hidden shadow-2xl relative h-[450px] md:h-[500px] w-full">
                      <img 
-                       src="/images/BG Image.png" 
+                       src="/images/Frame 5.png" 
                        alt="Road works context" 
                        className="w-full h-full object-cover" 
                      />
