@@ -8,7 +8,7 @@ const SERVICE_CARDS = [
     id: 1,
     title: 'Разметка холодным пластиком',
     description: 'Используем холодный пластик для создания износостойкой разметки на любых дорожных покрытиях долговечность',
-    image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop',
+    image: 'https://streetline-spb.ru/service/разметка-холодным-пластиком',
   },
   {
     id: 2,

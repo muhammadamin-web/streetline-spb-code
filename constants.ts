@@ -14,38 +14,38 @@ export const SERVICES: ServiceItem[] = [
     id: 's1',
     title: 'Разметка холодным пластиком',
     description: 'Используем холодный пластик для создания износостойкой разметки на любых дорожных покрытиях, долговечность.',
-    imageUrl: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop',
+    imageUrl: 'public/images/s1.png',
     linkText: 'Подробнее'
   },
   {
     id: 's2',
     title: 'Сигнальная разметка помещений',
     description: 'Обустроим сигнальную разметку для складов и цехов. Яркая разметка — для безопасности сотрудников и оптимизации процессов.',
-    imageUrl: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop',
+    imageUrl: 'public/images/s2.jpeg',
     linkText: 'Подробнее'
   },
   {
     id: 's3',
     title: 'Разметка парковок и паркингов',
     description: 'Разметка мест и зон парковок в СПб и области по ГОСТ: современные материалы, точные линии, чёткие знаки.',
-    imageUrl: 'https://images.unsplash.com/photo-1590674899505-1c5c41949430?q=80&w=800&auto=format&fit=crop',
+    imageUrl: 'public/images/s3.jpg',
     linkText: 'Подробнее'
   },
   {
     id: 's4',
     title: 'Разметка складов и логистических центров',
     description: 'Разметка мест и зон парковок в СПб и области по ГОСТ: современные материалы, точные линии, чёткие знаки.',
-    imageUrl: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?q=80&w=800&auto=format&fit=crop',
+    imageUrl: 'public/images/s3.jpg',
     linkText: 'Подробнее'
   }
 ];
 
 export const PROJECTS: ProjectItem[] = [
-  { id: 'p1', title: 'Комплексная разметка ЖК', imageUrl: 'https://images.unsplash.com/photo-1573348722427-f1d6819fdf98?q=80&w=800&auto=format&fit=crop' },
-  { id: 'p2', title: 'Велодорожки и пешеходные зоны', imageUrl: 'https://images.unsplash.com/photo-1632738722744-934c2642289f?q=80&w=800&auto=format&fit=crop' },
-  { id: 'p3', title: 'Складская логистика', imageUrl: 'https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=800&auto=format&fit=crop' },
-  { id: 'p4', title: 'Разметка парковочных мест', imageUrl: 'https://images.unsplash.com/photo-1621905252507-b35492cc2d31?q=80&w=800&auto=format&fit=crop' },
-  { id: 'p5', title: 'Ночная разметка дорог', imageUrl: 'https://images.unsplash.com/photo-1566242339501-1bb7921878d6?q=80&w=800&auto=format&fit=crop' }
+  { id: 'p1', title: 'Комплексная разметка ЖК', imageUrl: 'public/images/projects/1.avif' },
+  { id: 'p2', title: 'Велодорожки и пешеходные зоны', imageUrl: 'public/images/projects/2.avif' },
+  { id: 'p3', title: 'Складская логистика', imageUrl: 'public/images/projects/3.avif' },
+  { id: 'p4', title: 'Разметка парковочных мест', imageUrl: 'public/images/projects/4.avif' },
+  { id: 'p5', title: 'Ночная разметка дорог', imageUrl: 'public/images/projects/5.avif' }
 ];
 
 export const REVIEWS: ReviewItem[] = [
