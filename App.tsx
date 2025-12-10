@@ -88,7 +88,7 @@ export default function App() {
         <div className="absolute inset-0 z-0">
           {/* USER: REPLACE THE SRC ATTRIBUTE BELOW TO CHANGE BACKGROUND PHOTO */}
           <img 
-            src="public/images/bg_image.png" 
+            src="/images/bg_image.png" 
             alt="Hero Background" 
             className="w-full h-full object-cover"
           />
@@ -189,7 +189,7 @@ export default function App() {
 
             <div className="lg:w-1/2 relative">
                <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl">
-                 <img src="public/images/home_about.jpeg" alt="Road works" className="w-full h-full object-cover" />
+                 <img src="/images/home_about.jpeg" alt="Road works" className="w-full h-full object-cover" />
                  
                  <div className="absolute bottom-8 left-8 bg-[#1a1c20] text-white p-8 rounded-3xl max-w-[240px] hidden lg:block shadow-2xl border border-slate-800">
                     <div className="text-4xl font-bold mb-2">
@@ -346,10 +346,10 @@ export default function App() {
            <div className="flex flex-col lg:flex-row gap-16 items-center">
              <div className="lg:w-1/2 w-full relative h-[400px] md:h-[500px]">
                  <div className="absolute top-0 left-0 w-[75%] h-[80%] rounded-3xl overflow-hidden shadow-lg z-10">
-                    <img src="public/images/about2.avif" className="w-full h-full object-cover" alt="Industrial marking" />
+                    <img src="/images/about2.avif" className="w-full h-full object-cover" alt="Industrial marking" />
                  </div>
                  <div className="absolute bottom-0 right-0 w-[60%] h-[60%] rounded-3xl overflow-hidden shadow-2xl z-20 border-[8px] border-white">
-                    <img src="public/images/about1.png" className="w-full h-full object-cover" alt="Road marking detail" />
+                    <img src="/images/about1.png" className="w-full h-full object-cover" alt="Road marking detail" />
                  </div>
              </div>
              
@@ -547,7 +547,7 @@ export default function App() {
                      className="flex flex-col items-center cursor-pointer group"
                    >
                         <div className="w-[67px] h-[71px] relative mb-1">
-                          <img src="/public/images/logo.svg" alt="Streetline Logo" className="w-full h-full object-contain" />
+                          <img src="/images/logo.svg" alt="Streetline Logo" className="w-full h-full object-contain" />
                         </div>
                    </div>
 
@@ -644,7 +644,7 @@ export default function App() {
                     <div className="mb-12">
                         {/* Logo Approximation */}
                          <div className="w-[67px] h-[71px] relative mb-1">
-                          <img src="/public/images/logo.svg" alt="Streetline Logo" className="w-full h-full object-contain" />
+                          <img src="//images/logo.svg" alt="Streetline Logo" className="w-full h-full object-contain" />
                         </div>
                     </div>
 

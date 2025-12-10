@@ -38,11 +38,11 @@ const AboutPage: React.FC = () => {
               <div className="lg:w-1/2 flex flex-col gap-8">
                  <div className="rounded-[32px] overflow-hidden shadow-xl h-64 md:h-80 relative">
                     {/* Construction workers */}
-                    <img src="./public/images/WhatsApp Image 2025-11-15 at 10.38.05 (2).jpeg" alt="Construction team" className="w-full h-full object-cover" />
+                    <img src=".//images/WhatsApp Image 2025-11-15 at 10.38.05 (2).jpeg" alt="Construction team" className="w-full h-full object-cover" />
                  </div>
                  <div className="rounded-[32px] overflow-hidden shadow-xl h-64 md:h-80 relative">
                     {/* Dark parking */}
-                    <img src="./public/images/WhatsApp Image 2025-11-15 at 10.38.02.jpeg" alt="Underground parking" className="w-full h-full object-cover" />
+                    <img src=".//images/WhatsApp Image 2025-11-15 at 10.38.02.jpeg" alt="Underground parking" className="w-full h-full object-cover" />
                  </div>
               </div>
           </div>
@@ -56,22 +56,22 @@ const AboutPage: React.FC = () => {
                {/* Left Column: Tall Image */}
                <div className="h-[500px] lg:h-[800px] rounded-[32px] overflow-hidden shadow-lg">
                   {/* Building + Road work */}
-                  <img src="./public/images/WhatsApp Image 2025-11-15 at 10.37.59 (2).jpeg" alt="Complex project" className="w-full h-full object-cover" />
+                  <img src=".//images/WhatsApp Image 2025-11-15 at 10.37.59 (2).jpeg" alt="Complex project" className="w-full h-full object-cover" />
                </div>
 
                {/* Right Column: 3 Stacked Images */}
                <div className="flex flex-col gap-6 h-auto lg:h-[800px]">
                    <div className="flex-1 rounded-[32px] overflow-hidden shadow-lg min-h-[200px]">
                       {/* Bike path */}
-                      <img src="./public/images/WhatsApp Image 2025-11-15 at 10.37.56 (2).jpeg" alt="Bike path" className="w-full h-full object-cover" />
+                      <img src=".//images/WhatsApp Image 2025-11-15 at 10.37.56 (2).jpeg" alt="Bike path" className="w-full h-full object-cover" />
                    </div>
                    <div className="flex-1 rounded-[32px] overflow-hidden shadow-lg min-h-[200px]">
                       {/* Close up lines */}
-                      <img src="./public/images/WhatsApp Image 2025-11-15 at 10.37.59 (1).jpeg" alt="Marking detail" className="w-full h-full object-cover" />
+                      <img src=".//images/WhatsApp Image 2025-11-15 at 10.37.59 (1).jpeg" alt="Marking detail" className="w-full h-full object-cover" />
                    </div>
                    <div className="flex-1 rounded-[32px] overflow-hidden shadow-lg min-h-[200px]">
                       {/* Parking lot */}
-                      <img src="./public/images/WhatsApp Image 2025-11-15 at 10.38.01.jpeg" alt="Parking lot" className="w-full h-full object-cover" />
+                      <img src=".//images/WhatsApp Image 2025-11-15 at 10.38.01.jpeg" alt="Parking lot" className="w-full h-full object-cover" />
                    </div>
                </div>
             </div>
