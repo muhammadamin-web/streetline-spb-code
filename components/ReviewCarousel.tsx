@@ -72,8 +72,8 @@ const ReviewCarousel: React.FC<ReviewCarouselProps> = ({ reviews }) => {
 
   return (
     <div className="relative max-w-6xl mx-auto px-4 sm:px-0">
-       {/* Blue Border Container */}
-       <div className="border border-[#5B8AF0] rounded-3xl p-6 md:p-12 relative bg-transparent">
+       {/* Container without border */}
+       <div className="rounded-3xl p-6 md:p-12 relative bg-transparent">
           
           <div 
              className="overflow-hidden"

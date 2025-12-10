@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Clock, ShieldCheck, Star, CheckCircle, Phone } from 'lucide-react';
+import FAQSection from './FAQSection';
 import { SectionId } from '../types';
 
 // Данные для карточек услуг на основе скриншота
@@ -139,46 +140,46 @@ const ServicesPage: React.FC = () => {
                <div className="lg:w-7/12 relative">
                   <div className="rounded-[24px] lg:rounded-[40px] overflow-hidden shadow-2xl relative h-[450px] md:h-[500px] w-full">
                      <img 
-                       src="/images/BG Image.png" 
+                       src="/images/Frame 5.png" 
                        alt="Road works context" 
                        className="w-full h-full object-cover" 
                      />
                      <div className="absolute inset-0 bg-black/10"></div>
                   </div>
 
-                  {/* Плавающие карточки (Overlay Cards) */}
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-[320px] md:max-w-md flex flex-col gap-3 md:gap-4 px-4">
+                  {/* Плавающие карточки (Overlay Cards) - слева внизу */}
+                  <div className="absolute bottom-6 md:bottom-8 lg:bottom-10 left-4 md:left-6 lg:left-8 flex flex-col gap-3 md:gap-4 w-[calc(100%-2rem)] sm:w-[280px] md:w-[320px] lg:w-[380px]">
                      
                      {/* Карточка 1 */}
-                     <div className="bg-white p-3 md:p-4 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-3 md:gap-4 transform md:-translate-x-8">
-                        <div className="w-9 h-9 md:w-10 md:h-10 bg-yellow-400 rounded-full flex items-center justify-center shrink-0">
-                           <Clock className="w-4 h-4 md:w-5 md:h-5 text-black" />
+                     <div className="bg-white p-3 md:p-4 lg:p-5 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-3 md:gap-4">
+                        <div className="w-9 h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-yellow-400 rounded-full flex items-center justify-center shrink-0">
+                           <Clock className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-black" />
                         </div>
                         <div>
-                           <div className="font-bold text-xs md:text-sm">Круглосуточная</div>
-                           <div className="font-bold text-xs md:text-sm">поддержка 24/7</div>
+                           <div className="font-bold text-xs md:text-sm lg:text-base">Круглосуточная</div>
+                           <div className="font-bold text-xs md:text-sm lg:text-base">поддержка 24/7</div>
                         </div>
                      </div>
 
                      {/* Карточка 2 */}
-                     <div className="bg-white p-3 md:p-4 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-3 md:gap-4 transform md:translate-x-8">
-                        <div className="w-9 h-9 md:w-10 md:h-10 bg-yellow-400 rounded-full flex items-center justify-center shrink-0">
-                           <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-black" />
+                     <div className="bg-white p-3 md:p-4 lg:p-5 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-3 md:gap-4">
+                        <div className="w-9 h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-yellow-400 rounded-full flex items-center justify-center shrink-0">
+                           <CheckCircle className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-black" />
                         </div>
                         <div>
-                           <div className="font-bold text-xs md:text-sm">Быстрое и надёжное</div>
-                           <div className="font-bold text-xs md:text-sm">выполнение работ</div>
+                           <div className="font-bold text-xs md:text-sm lg:text-base">Быстрое и надёжное</div>
+                           <div className="font-bold text-xs md:text-sm lg:text-base">выполнение работ</div>
                         </div>
                      </div>
 
                      {/* Карточка 3 */}
-                     <div className="bg-white p-3 md:p-4 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-3 md:gap-4 transform md:-translate-x-4">
-                        <div className="w-9 h-9 md:w-10 md:h-10 bg-yellow-400 rounded-full flex items-center justify-center shrink-0">
-                           <ShieldCheck className="w-4 h-4 md:w-5 md:h-5 text-black" />
+                     <div className="bg-white p-3 md:p-4 lg:p-5 rounded-xl md:rounded-2xl shadow-lg flex items-center gap-3 md:gap-4">
+                        <div className="w-9 h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-yellow-400 rounded-full flex items-center justify-center shrink-0">
+                           <ShieldCheck className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-black" />
                         </div>
                         <div>
-                           <div className="font-bold text-xs md:text-sm">Опытные и проверенные</div>
-                           <div className="font-bold text-xs md:text-sm">специалисты</div>
+                           <div className="font-bold text-xs md:text-sm lg:text-base">Опытные и проверенные</div>
+                           <div className="font-bold text-xs md:text-sm lg:text-base">специалисты</div>
                         </div>
                      </div>
 
@@ -292,6 +293,8 @@ const ServicesPage: React.FC = () => {
             </div>
          </div>
       </section>
+
+      <FAQSection />
 
     </div>
   );

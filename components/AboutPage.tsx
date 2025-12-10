@@ -1,15 +1,10 @@
 import React from 'react';
-import { Briefcase, Clock, ArrowRight } from 'lucide-react';
-import { REVIEWS, FAQ_ITEMS } from '../constants';
+import { Briefcase, Clock } from 'lucide-react';
+import { REVIEWS } from '../constants';
 import ReviewCarousel from './ReviewCarousel';
+import FAQSection from './FAQSection';
 
 const AboutPage: React.FC = () => {
-  const [activeFaq, setActiveFaq] = React.useState<number | null>(0);
-
-  const toggleFaq = (index: number) => {
-    setActiveFaq(activeFaq === index ? null : index);
-  };
-
   return (
     <div className="bg-white text-slate-900">
       
@@ -35,14 +30,14 @@ const AboutPage: React.FC = () => {
               </div>
 
               {/* Right Images Column */}
-              <div className="lg:w-1/2 flex flex-col gap-8">
-                 <div className="rounded-[32px] overflow-hidden shadow-xl h-64 md:h-80 relative">
+              <div className="w-full lg:w-1/2 flex flex-col gap-6 md:gap-8">
+                 <div className="rounded-[20px] md:rounded-[32px] overflow-hidden shadow-xl h-64 md:h-80 relative">
                     {/* Construction workers */}
-                    <img src="./public/images/WhatsApp Image 2025-11-15 at 10.38.05 (2).jpeg" alt="Construction team" className="w-full h-full object-cover" />
+                    <img src="/images/WhatsApp Image 2025-11-15 at 10.38.05 (2).jpeg" alt="Construction team" className="w-full h-full object-cover" />
                  </div>
-                 <div className="rounded-[32px] overflow-hidden shadow-xl h-64 md:h-80 relative">
+                 <div className="rounded-[20px] md:rounded-[32px] overflow-hidden shadow-xl h-64 md:h-80 relative">
                     {/* Dark parking */}
-                    <img src="./public/images/WhatsApp Image 2025-11-15 at 10.38.02.jpeg" alt="Underground parking" className="w-full h-full object-cover" />
+                    <img src="/images/WhatsApp Image 2025-11-15 at 10.38.02.jpeg" alt="Underground parking" className="w-full h-full object-cover" />
                  </div>
               </div>
           </div>
@@ -56,64 +51,75 @@ const AboutPage: React.FC = () => {
                {/* Left Column: Tall Image */}
                <div className="h-[500px] lg:h-[800px] rounded-[32px] overflow-hidden shadow-lg">
                   {/* Building + Road work */}
-                  <img src="./public/images/WhatsApp Image 2025-11-15 at 10.37.59 (2).jpeg" alt="Complex project" className="w-full h-full object-cover" />
+                  <img src="/images/WhatsApp Image 2025-11-15 at 10.37.59 (2).jpeg" alt="Complex project" className="w-full h-full object-cover" />
                </div>
 
                {/* Right Column: 3 Stacked Images */}
                <div className="flex flex-col gap-6 h-auto lg:h-[800px]">
                    <div className="flex-1 rounded-[32px] overflow-hidden shadow-lg min-h-[200px]">
                       {/* Bike path */}
-                      <img src="./public/images/WhatsApp Image 2025-11-15 at 10.37.56 (2).jpeg" alt="Bike path" className="w-full h-full object-cover" />
+                      <img src="/images/WhatsApp Image 2025-11-15 at 10.37.56 (2).jpeg" alt="Bike path" className="w-full h-full object-cover" />
                    </div>
                    <div className="flex-1 rounded-[32px] overflow-hidden shadow-lg min-h-[200px]">
                       {/* Close up lines */}
-                      <img src="./public/images/WhatsApp Image 2025-11-15 at 10.37.59 (1).jpeg" alt="Marking detail" className="w-full h-full object-cover" />
+                      <img src="/images/WhatsApp Image 2025-11-15 at 10.37.59 (1).jpeg" alt="Marking detail" className="w-full h-full object-cover" />
                    </div>
                    <div className="flex-1 rounded-[32px] overflow-hidden shadow-lg min-h-[200px]">
                       {/* Parking lot */}
-                      <img src="./public/images/WhatsApp Image 2025-11-15 at 10.38.01.jpeg" alt="Parking lot" className="w-full h-full object-cover" />
+                      <img src="/images/WhatsApp Image 2025-11-15 at 10.38.01.jpeg" alt="Parking lot" className="w-full h-full object-cover" />
                    </div>
                </div>
             </div>
          </div>
       </section>
 
-      {/* Feature Section - Three Cards on Parking Background - Точно как на фото */}
-      <section className="relative w-full max-w-[1200px] h-[600px] mx-auto bg-cover bg-center bg-no-repeat flex items-end rounded-3xl overflow-hidden" 
-               style={{backgroundImage: 'url(/images/BG%20Image.png)'}}>
+      {/* Feature Section - Photo with overlapping cards */}
+      <section className="relative bg-white">
+         {/* Фото парковки - верхняя часть */}
+         {/* НАСТРОЙКА ВЫСОТЫ ФОТО: измените значение h-[500px] на нужное (например h-[400px], h-[600px]) */}
+         <div className="relative w-full h-[500px] overflow-hidden">
+            <img 
+               src="/images/WhatsApp Image 2025-11-15 at 10.38.05 (2).jpeg" 
+               alt="Parking lot marking"
+               className="w-full h-full object-cover"
+            />
+            {/* Градиент снизу для плавного перехода */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+         </div>
          
-         <div className="w-full px-6 lg:px-12 relative z-10 pb-12 lg:pb-16">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+         {/* Контейнер с карточками - "торчат" наполовину поверх фото */}
+         <div className="relative w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 -mt-20 sm:-mt-24 md:-mt-28 lg:-mt-32 pb-8 sm:pb-12 md:pb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 max-w-6xl mx-auto">
                
                {/* Карточка 1 - Профессиональное выполнение */}
-               <div className="bg-white p-8 lg:p-10 rounded-[24px] shadow-2xl">
-                  <div className="w-16 h-16 lg:w-20 lg:h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-6">
-                     <Briefcase className="w-8 h-8 lg:w-10 lg:h-10 text-black" />
+               <div className="bg-white p-5 sm:p-6 rounded-[20px] sm:rounded-[24px] shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.18)] transition-all duration-300 flex flex-col">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 bg-yellow-400 rounded-full flex items-center justify-center mb-4 shadow-md">
+                     <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
                   </div>
-                  <h3 className="text-xl lg:text-2xl font-bold mb-4 text-black leading-tight">Профессиональное выполнение</h3>
-                  <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 text-slate-900 leading-tight">Профессиональное выполнение</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
                      Наши специалисты проходят строгую подготовку и обладают реальным опытом, что гарантирует аккуратность каждой разметки.
                   </p>
                </div>
 
                {/* Карточка 2 - Быстро и надёжно */}
-               <div className="bg-white p-8 lg:p-10 rounded-[24px] shadow-2xl">
-                  <div className="w-16 h-16 lg:w-20 lg:h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-6">
-                     <Clock className="w-8 h-8 lg:w-10 lg:h-10 text-black" />
+               <div className="bg-white p-5 sm:p-6 rounded-[20px] sm:rounded-[24px] shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.18)] transition-all duration-300 flex flex-col">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 bg-yellow-400 rounded-full flex items-center justify-center mb-4 shadow-md">
+                     <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
                   </div>
-                  <h3 className="text-xl lg:text-2xl font-bold mb-4 text-black leading-tight">Быстро и надёжно</h3>
-                  <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 text-slate-900 leading-tight">Быстро и надёжно</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
                      Оперативно выезжаем и выполняем работы по дорожной разметке без задержек.
                   </p>
                </div>
 
                {/* Карточка 3 - Прозрачные цены */}
-               <div className="bg-white p-8 lg:p-10 rounded-[24px] shadow-2xl">
-                  <div className="w-16 h-16 lg:w-20 lg:h-20 bg-yellow-400 rounded-2xl flex items-center justify-center mb-6">
-                     <span className="text-2xl lg:text-3xl font-bold text-black">₽</span>
+               <div className="bg-white p-5 sm:p-6 rounded-[20px] sm:rounded-[24px] shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.18)] transition-all duration-300 flex flex-col">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 bg-yellow-400 rounded-full flex items-center justify-center mb-4 shadow-md">
+                     <span className="text-lg sm:text-xl font-bold text-black">₽</span>
                   </div>
-                  <h3 className="text-xl lg:text-2xl font-bold mb-4 text-black leading-tight">Прозрачные цены</h3>
-                  <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 text-slate-900 leading-tight">Прозрачные цены</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
                      Без скрытых платежей и лишних расходов. Мы всегда открыто обсуждаем стоимость и детали заказа.
                   </p>
                </div>
@@ -130,40 +136,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-8">
-           <div className="flex flex-col lg:flex-row gap-16">
-              <div className="lg:w-5/12">
-                 <h2 className="text-3xl md:text-5xl font-medium mb-6">Часто задаваемые вопросы</h2>
-                 <p className="text-slate-500 text-sm mb-8">
-                   Остались вопросы? — Свяжитесь с нами!
-                 </p>
-                 <button className="flex items-center gap-2 text-xs font-bold uppercase hover:text-yellow-500 transition-colors">
-                   Свяжитесь с нами <ArrowRight className="w-4 h-4" />
-                 </button>
-              </div>
-
-              <div className="lg:w-7/12">
-                 <div className="divide-y divide-slate-100">
-                   {FAQ_ITEMS.map((item, idx) => (
-                     <div key={idx} className="py-6">
-                       <button 
-                         onClick={() => toggleFaq(idx)}
-                         className="flex justify-between items-center w-full text-left group"
-                       >
-                         <span className="text-lg font-medium pr-8 group-hover:text-yellow-500 transition-colors">{item.question}</span>
-                         <span className={`text-slate-400 transition-transform ${activeFaq === idx ? 'rotate-180' : ''}`}>▼</span>
-                       </button>
-                       <div className={`overflow-hidden transition-all duration-300 ${activeFaq === idx ? 'max-h-40 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
-                         <p className="text-slate-500 text-sm leading-relaxed">{item.answer}</p>
-                       </div>
-                     </div>
-                   ))}
-                 </div>
-              </div>
-           </div>
-        </div>
-      </section>
+      <FAQSection />
 
       {/* Contact Section */}
       <section className="py-32 bg-[#0a0a0a] relative overflow-hidden text-white">

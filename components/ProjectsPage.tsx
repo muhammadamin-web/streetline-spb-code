@@ -1,6 +1,8 @@
 import React from 'react';
 import { ArrowRight, Phone } from 'lucide-react';
 import { SectionId } from '../types';
+import CountUp from './CountUp';
+import FAQSection from './FAQSection';
 
 // Data for all projects
 const ALL_PROJECTS = [
@@ -44,28 +46,28 @@ const ALL_PROJECTS = [
     title: 'Разметка автодрома',
     category: 'Спортивный объект',
     description: 'Специализированная разметка гоночного трека на автодроме "Игора Драйв" с применением термопластика.',
-    imageUrl: 'https://images.unsplash.com/photo-1592833353528-912f275eb016?q=80&w=800&auto=format&fit=crop',
+    imageUrl: './public/images/projects/sport.jpeg',
   },
   {
     id: 7,
     title: 'Парковка бизнес-центра',
     category: 'Бизнес-центр',
     description: 'Многоуровневая парковка с четкой навигацией и зонированием для арендаторов офисного здания.',
-    imageUrl: 'https://images.unsplash.com/photo-1590674899505-1c5c41949430?q=80&w=800&auto=format&fit=crop',
+    imageUrl: './public/images/projects/bizness.jpeg',
   },
   {
     id: 8,
     title: 'Разметка школьной территории',
     category: 'Образовательное учреждение',
     description: 'Безопасная разметка пешеходных переходов, зон высадки детей и парковки возле школы.',
-    imageUrl: 'https://images.unsplash.com/photo-1621905252507-b35492cc2d31?q=80&w=800&auto=format&fit=crop',
+    imageUrl: './public/images/projects/obraz.jpeg',
   },
   {
     id: 9,
     title: 'Промышленная зона',
     category: 'Промышленный объект',
     description: 'Разметка территории промышленного предприятия с учетом движения грузового транспорта.',
-    imageUrl: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop',
+    imageUrl: './public/images/projects/promish.jpeg',
   },
 ];
 
@@ -203,15 +205,15 @@ const ProjectsPage: React.FC = () => {
                {/* Right Side: Stats */}
                <div className="lg:w-1/2 grid grid-cols-2 gap-6">
                   <div className="bg-white rounded-3xl p-8 text-center shadow-lg">
-                     <div className="text-5xl font-bold text-black mb-3">500+</div>
+                     <div className="text-5xl font-bold text-black mb-3"><CountUp end={500} suffix="+" /></div>
                      <div className="text-sm text-slate-600 font-medium">Выполненных проектов</div>
                   </div>
                   <div className="bg-white rounded-3xl p-8 text-center shadow-lg">
-                     <div className="text-5xl font-bold text-black mb-3">12</div>
+                     <div className="text-5xl font-bold text-black mb-3"><CountUp end={12} /></div>
                      <div className="text-sm text-slate-600 font-medium">Лет на рынке</div>
                   </div>
                   <div className="bg-white rounded-3xl p-8 text-center shadow-lg">
-                     <div className="text-5xl font-bold text-black mb-3">98%</div>
+                     <div className="text-5xl font-bold text-black mb-3"><CountUp end={98} suffix="%" /></div>
                      <div className="text-sm text-slate-600 font-medium">Довольных клиентов</div>
                   </div>
                   <div className="bg-white rounded-3xl p-8 text-center shadow-lg">
@@ -291,6 +293,8 @@ const ProjectsPage: React.FC = () => {
             </div>
          </div>
       </section>
+
+      <FAQSection />
 
     </div>
   );

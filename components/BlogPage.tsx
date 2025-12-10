@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Phone } from 'lucide-react';
+import FAQSection from './FAQSection';
 import { SectionId } from '../types';
 
 // Data for the featured blog posts (Top Section)
@@ -9,7 +10,7 @@ const FEATURED_POSTS = [
     tag: 'Совет от профессионала',
     title: 'Виды и технологии дорожной разметки сравнение термопластика, холодного пластика и краски',
     description: 'Виды дорожной разметки в Санкт-Петербурге: что лучше — холодный пластик, термопластик или краска?',
-    image: 'https://images.unsplash.com/photo-1621905252507-b35492cc2d31?q=80&w=800&auto=format&fit=crop', // Close match to asphalt texture
+    image: './public/images/news/s1.png', // Close match to asphalt texture
     isLarge: true
   },
   {
@@ -17,7 +18,7 @@ const FEATURED_POSTS = [
     tag: 'Совет от профессионала',
     title: 'Технологии и материалы дорожной разметки',
     description: 'Погружаемся в преимущества и недостатки термопластика, холодного пластика и разметочных красок. Узнайте, какой материал выбрать для дороги, паркинга или склада — срок службы, совместимость с ГОСТ, стоимость.',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop', // Yellow marking similar to EV symbol
+    image: './public/images/news/s3.jpg', // Yellow marking similar to EV symbol
     isLarge: false
   },
   {
@@ -25,7 +26,7 @@ const FEATURED_POSTS = [
     tag: 'Совет от профессионала',
     title: 'Кейсы и примеры проектов',
     description: 'Показываем реальные объекты, реализованные командой Streetline: дороги, парковки, складские зоны Санкт-Петербурга и области. Фото до/после, этапы работ, особенности каждого проекта и применённые технологии.',
-    image: 'https://images.unsplash.com/photo-1632738722744-934c2642289f?q=80&w=800&auto=format&fit=crop', // Bike lane
+    image: './public/images/news/WhatsApp Image 2025-11-15 at 10.38.02.jpeg', // Bike lane
     isLarge: false
   }
 ];
@@ -37,21 +38,21 @@ const MORE_ARTICLES = [
     tag: 'Совет от профессионала',
     title: 'Технологии и материалы дорожной разметки Copy', // Matching screenshot text "Copy"
     description: 'Погружаемся в преимущества и недостатки термопластика, холодного пластика и разметочных красок. Узнайте, какой материал выбрать для дороги, паркинга или склада — срок службы, совместимость с ГОСТ, стоимость.',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop',
+    image: './public/images/news/WhatsApp Image 2025-11-15 at 10.37.59 (1).jpeg',
   },
   {
     id: 2,
     tag: 'Совет от профессионала',
-    title: 'Кейсы и примеры проектов Copy', // Matching screenshot text "Copy"
+    title: 'Кейсы и примеры проектов', // Matching screenshot text "Copy"
     description: 'Показываем реальные объекты, реализованные командой Streetline: дороги, парковки, складские зоны Санкт-Петербурга и области. Фото до/после, этапы работ, особенности каждого проекта и применённые технологии.',
-    image: 'https://images.unsplash.com/photo-1632738722744-934c2642289f?q=80&w=800&auto=format&fit=crop',
+    image: './public/images/news/WhatsApp Image 2025-11-15 at 10.38.00.jpeg',
   },
   {
     id: 3,
     tag: 'Совет от профессионала',
     title: 'Виды и технологии дорожной разметки сравнение термопластика, холодного пластика и краски Copy', // Matching screenshot text "Copy"
     description: 'Виды дорожной разметки в Санкт-Петербурге: что лучше — холодный пластик, термопластик или краска?',
-    image: 'https://images.unsplash.com/photo-1621905252507-b35492cc2d31?q=80&w=800&auto=format&fit=crop',
+    image: './public/images/news/WhatsApp Image 2025-11-15 at 10.38.01.jpeg',
   }
 ];
 
@@ -209,6 +210,8 @@ const BlogPage: React.FC = () => {
             </div>
          </div>
       </section>
+
+      <FAQSection />
 
     </div>
   );
