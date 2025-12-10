@@ -1,4 +1,5 @@
 import React from 'react';
+import LeadForm from './LeadForm';
 import { ArrowRight, Phone } from 'lucide-react';
 import { SectionId } from '../types';
 
@@ -250,42 +251,7 @@ const ProjectsPage: React.FC = () => {
               </div>
 
               <div className="lg:w-1/2 w-full">
-                <div className="bg-white rounded-[32px] p-8 md:p-12 text-slate-900 shadow-2xl">
-                  <h3 className="text-2xl font-bold mb-8">Закажите услугу</h3>
-                  <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert('Спасибо! Ваша заявка отправлена.'); }}>
-                    <div>
-                      <label className="text-xs font-bold text-slate-400 ml-1 mb-2 block uppercase tracking-wide">Имя</label>
-                      <input 
-                        type="text" 
-                        placeholder="Владимир Медведев" 
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-6 py-4 text-base focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-colors placeholder:text-slate-400"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="text-xs font-bold text-slate-400 ml-1 mb-2 block uppercase tracking-wide">Номер телефона</label>
-                      <input 
-                        type="tel" 
-                        placeholder="+7 (999) 999-99-99" 
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-6 py-4 text-base focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-colors placeholder:text-slate-400"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="text-xs font-bold text-slate-400 ml-1 mb-2 block uppercase tracking-wide">Комментарий</label>
-                      <textarea 
-                        rows={3}
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-6 py-4 text-base focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-colors placeholder:text-slate-400"
-                      ></textarea>
-                    </div>
-                    <button 
-                      type="submit"
-                      className="w-full bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-lg py-5 rounded-xl transition-all shadow-lg shadow-yellow-400/20 mt-4"
-                    >
-                      Отправить заявку
-                    </button>
-                  </form>
-                </div>
+                <LeadForm />
               </div>
 
             </div>
