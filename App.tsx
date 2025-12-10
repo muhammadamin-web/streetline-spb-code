@@ -36,13 +36,6 @@ export default function App() {
       return;
     }
 
-    // Navigate to "Projects" page
-    if (item.label === 'Наши работы') {
-      setCurrentView('projects');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      return;
-    }
-
     // Navigate to "Blog" page
     if (item.label === 'Блог') {
       setCurrentView('blog');
