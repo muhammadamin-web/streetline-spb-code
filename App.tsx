@@ -547,7 +547,7 @@ export default function App() {
                      className="flex flex-col items-center cursor-pointer group"
                    >
                         <div className="w-[67px] h-[71px] relative mb-1">
-                          <img src="public/images/logo.svg" alt="Streetline Logo" className="w-full h-full object-contain" />
+                          <img src="/public/images/logo.svg" alt="Streetline Logo" className="w-full h-full object-contain" />
                         </div>
                    </div>
 
@@ -644,7 +644,7 @@ export default function App() {
                     <div className="mb-12">
                         {/* Logo Approximation */}
                          <div className="w-[67px] h-[71px] relative mb-1">
-                          <img src="public/images/logo.svg" alt="Streetline Logo" className="w-full h-full object-contain" />
+                          <img src="/public/images/logo.svg" alt="Streetline Logo" className="w-full h-full object-contain" />
                         </div>
                     </div>
 
