@@ -79,8 +79,8 @@ const ContactPage: React.FC = () => {
                      <Phone className="w-6 h-6 text-yellow-500" />
                   </div>
                   <h3 className="text-xl font-bold mb-4">Телефон</h3>
-                  <p className="font-medium text-lg">+7 (993) 352-15-02</p>
-                  <p className="font-medium text-lg">+7 (921) 015-88-02</p>
+                  <a href="tel:+79933521502" className="font-medium text-lg hover:underline">+7 (993) 352-15-02</a>
+                  <a href="tel:+79210158802" className="font-medium text-lg hover:underline">+7 (921) 015-88-02</a>
                </div>
 
                {/* Email Card */}
@@ -149,13 +149,13 @@ const ContactPage: React.FC = () => {
                       <div className="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center text-black">
                         <Phone className="w-5 h-5" />
                       </div>
-                      <span className="font-bold text-lg">+7 (993) 352-15-02</span>
+                      <a href="tel:+79933521502" className="font-bold text-lg hover:text-yellow-400 transition-colors">+7 (993) 352-15-02</a>
                    </div>
                    <div className="flex items-center gap-3">
                       <div className="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center text-black">
                         <Phone className="w-5 h-5" />
                       </div>
-                      <span className="font-bold text-lg">+7 (951) 658-93-82</span>
+                      <a href="tel:+79516589382" className="font-bold text-lg hover:text-yellow-400 transition-colors">+7 (951) 658-93-82</a>
                    </div>
                </div>
             </div>

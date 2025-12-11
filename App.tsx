@@ -6,6 +6,7 @@ import AIChatBot from './components/AIChatBot';
 import CountUp from './components/CountUp';
 import ReviewCarousel from './components/ReviewCarousel';
 import FAQSection from './components/FAQSection';
+import ContactFormSection from './components/ContactFormSection';
 import AboutPage from './components/AboutPage';
 import ServicesPage from './components/ServicesPage';
 import BlogPage from './components/BlogPage';
@@ -450,72 +451,7 @@ export default function App() {
       <FAQSection showSectionId={true} />
 
       {/* Contact / CTA Section */}
-      <section id={SectionId.CONTACT} className="py-24 bg-[#0a0a0a] relative overflow-hidden text-white">
-         <div className="container mx-auto px-4 md:px-8 relative z-10">
-            <div className="flex flex-col lg:flex-row gap-16 items-center">
-              
-              <div className="lg:w-1/2">
-                <div className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">Мы готовы вам помочь</div>
-                <h2 className="text-3xl md:text-5xl font-medium mb-12 leading-tight">Обсуждение вашего проекта дорожной разметки</h2>
-                
-                <div className="flex flex-col sm:flex-row gap-8 mt-12">
-                   <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center text-black">
-                        <Phone className="w-5 h-5" />
-                      </div>
-                      <span className="font-bold text-lg">+7 (993) 352-15-02</span>
-                   </div>
-                   <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center text-black">
-                        <Phone className="w-5 h-5" />
-                      </div>
-                      <span className="font-bold text-lg">+7 (951) 658-93-82</span>
-                   </div>
-                </div>
-              </div>
-
-              <div className="lg:w-1/2 w-full">
-                <div className="bg-white rounded-[32px] p-8 md:p-12 text-slate-900 shadow-2xl">
-                  <h3 className="text-2xl font-bold mb-8">Закажите услугу</h3>
-                  <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert('Спасибо! Ваша заявка отправлена.'); }}>
-                    <div>
-                      <label className="text-xs font-bold text-slate-400 ml-1 mb-2 block uppercase tracking-wide">Имя</label>
-                      <input 
-                        type="text" 
-                        placeholder="Владимир Медведев" 
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-6 py-4 text-base focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-colors placeholder:text-slate-400"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="text-xs font-bold text-slate-400 ml-1 mb-2 block uppercase tracking-wide">Номер телефона</label>
-                      <input 
-                        type="tel" 
-                        placeholder="+7 (999) 999-99-99" 
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-6 py-4 text-base focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-colors placeholder:text-slate-400"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="text-xs font-bold text-slate-400 ml-1 mb-2 block uppercase tracking-wide">Комментарий</label>
-                      <textarea 
-                        rows={3}
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-6 py-4 text-base focus:outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-colors placeholder:text-slate-400"
-                      ></textarea>
-                    </div>
-                    <button 
-                      type="submit"
-                      className="w-full bg-yellow-400 hover:bg-yellow-300 text-black font-bold text-lg py-5 rounded-xl transition-all shadow-lg shadow-yellow-400/20 mt-4"
-                    >
-                      Отправить заявку
-                    </button>
-                  </form>
-                </div>
-              </div>
-
-            </div>
-         </div>
-      </section>
+      <ContactFormSection showSectionId={true} />
     </>
   );
 
@@ -530,7 +466,7 @@ export default function App() {
              <span className="text-white">Нужна срочная дорожная разметка?</span>
              <div className="flex items-center gap-2 text-yellow-400">
                  <Phone className="w-4 h-4 text-white" />
-                 <span>+79933521502</span>
+                 <a href="tel:+79933521502" className="hover:text-yellow-300 transition-colors">+79933521502</a>
              </div>
              <div className="flex items-center gap-2 text-yellow-400">
                  <Mail className="w-4 h-4 text-white" />
@@ -568,7 +504,7 @@ export default function App() {
 
                    {/* Right Side: Phone + Button (Desktop) */}
                    <div className="hidden md:flex items-center gap-6">
-                      <span className="text-white font-medium text-sm">+7 (993) 352-15-02</span>
+                      <a href="tel:+79933521502" className="text-white font-medium text-sm hover:text-yellow-400 transition-colors">+7 (993) 352-15-02</a>
                       <button 
                          onClick={() => {
                              setCurrentView('contact');
@@ -606,7 +542,7 @@ export default function App() {
                <div className="flex flex-col gap-4 mt-4 border-t border-white/10 pt-6">
                   <div className="flex items-center gap-3 text-yellow-400 font-bold text-lg">
                      <Phone className="w-5 h-5" />
-                     <span>+7 (993) 352-15-02</span>
+                     <a href="tel:+79933521502" className="hover:text-yellow-300 transition-colors">+7 (993) 352-15-02</a>
                   </div>
                   <div className="flex items-center gap-3 text-slate-400 text-sm">
                      <Clock className="w-5 h-5" />

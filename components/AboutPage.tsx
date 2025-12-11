@@ -3,6 +3,7 @@ import { Briefcase, Clock } from 'lucide-react';
 import { REVIEWS } from '../constants';
 import ReviewCarousel from './ReviewCarousel';
 import FAQSection from './FAQSection';
+import ContactFormSection from './ContactFormSection';
 
 const AboutPage: React.FC = () => {
   return (
@@ -139,25 +140,7 @@ const AboutPage: React.FC = () => {
       <FAQSection />
 
       {/* Contact Section */}
-      <section className="py-32 bg-[#0a0a0a] relative overflow-hidden text-white">
-         <div className="absolute inset-0 opacity-20 pointer-events-none">
-            <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-               <path d="M0,100 C30,80 70,80 100,0" fill="none" stroke="white" strokeWidth="0.1" strokeDasharray="1 1" />
-            </svg>
-         </div>
-
-         <div className="container mx-auto px-4 md:px-8 relative z-10 flex justify-end">
-            <div className="bg-white rounded-[32px] p-12 md:p-16 max-w-lg w-full text-center shadow-2xl text-slate-900">
-               <h2 className="text-3xl md:text-4xl font-bold mb-8">Закажите услугу</h2>
-               <div className="w-full h-40 bg-slate-100 rounded-2xl mb-8 flex items-center justify-center text-slate-400 text-sm">
-                  Форма заявки
-               </div>
-               <button className="w-full bg-[#0a0a0a] text-white font-bold py-4 rounded-xl uppercase tracking-wider hover:bg-slate-900 transition-colors">
-                  Обсудить проект
-               </button>
-            </div>
-         </div>
-      </section>
+      <ContactFormSection />
 
     </div>
   );
