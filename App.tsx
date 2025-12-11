@@ -7,11 +7,13 @@ import CountUp from './components/CountUp';
 import ReviewCarousel from './components/ReviewCarousel';
 import FAQSection from './components/FAQSection';
 import ContactFormSection from './components/ContactFormSection';
+import WorkProcessSection from './components/WorkProcessSection';
 import AboutPage from './components/AboutPage';
 import ServicesPage from './components/ServicesPage';
 import BlogPage from './components/BlogPage';
 import ContactPage from './components/ContactPage';
 import ProjectsPage from './components/ProjectsPage';
+import LeadForm from './components/LeadForm';
 // Define possible view states for pages
 type ViewState = 'home' | 'about' | 'services' | 'blog' | 'contact' | 'projects';
 
@@ -91,7 +93,7 @@ export default function App() {
         <div className="absolute inset-0 z-0">
           {/* USER: REPLACE THE SRC ATTRIBUTE BELOW TO CHANGE BACKGROUND PHOTO */}
           <img 
-            src="public/images/bg_image.png" 
+            src="/images/bg_image.png" 
             alt="Hero Background" 
             className="w-full h-full object-cover"
           />
@@ -192,7 +194,7 @@ export default function App() {
 
             <div className="lg:w-1/2 relative">
                <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl">
-                 <img src="public/images/home_about.jpeg" alt="Road works" className="w-full h-full object-cover" />
+                 <img src="/images/home_about.jpeg" alt="Road works" className="w-full h-full object-cover" />
                  
                  <div className="absolute bottom-8 left-8 bg-[#1a1c20] text-white p-8 rounded-3xl max-w-[240px] hidden lg:block shadow-2xl border border-slate-800">
                     <div className="text-4xl font-bold mb-2">
@@ -349,10 +351,10 @@ export default function App() {
            <div className="flex flex-col lg:flex-row gap-16 items-center">
              <div className="lg:w-1/2 w-full relative h-[400px] md:h-[500px]">
                  <div className="absolute top-0 left-0 w-[75%] h-[80%] rounded-3xl overflow-hidden shadow-lg z-10">
-                    <img src="public/images/about2.avif" className="w-full h-full object-cover" alt="Industrial marking" />
+                    <img src="/images/about2.avif" className="w-full h-full object-cover" alt="Industrial marking" />
                  </div>
                  <div className="absolute bottom-0 right-0 w-[60%] h-[60%] rounded-3xl overflow-hidden shadow-2xl z-20 border-[8px] border-white">
-                    <img src="public/images/about1.png" className="w-full h-full object-cover" alt="Road marking detail" />
+                    <img src="/images/about1.png" className="w-full h-full object-cover" alt="Road marking detail" />
                  </div>
              </div>
              
@@ -392,60 +394,7 @@ export default function App() {
       </section>
 
       {/* Steps / Process (Yellow Cards on Dark) */}
-      <section className="bg-[#1a1c20] py-24 relative overflow-hidden">
-        <div className="container mx-auto px-4 md:px-8 relative z-10">
-           <div className="flex flex-col lg:flex-row justify-between gap-16">
-              
-              {/* Left Side: Text */}
-              <div className="lg:w-5/12 pt-10">
-                 <div className="text-sm font-medium text-slate-400 mb-4">Рабочий процесс</div>
-                 <h2 className="text-4xl md:text-5xl font-medium text-white leading-tight">
-                    3 простых, понятных <br className="hidden md:block"/> шагов.
-                 </h2>
-              </div>
-
-              {/* Right Side: Cards */}
-              <div className="lg:w-7/12 flex flex-col gap-6">
-                 {/* Card 01 */}
-                 <div className="bg-yellow-400 rounded-3xl p-8 md:p-10 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
-                    <div className="absolute inset-0 opacity-10" 
-                         style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
-                    </div>
-                    <div className="relative z-10">
-                        <div className="text-6xl font-bold text-white mb-6 opacity-80">01</div>
-                        <h3 className="text-xl font-bold text-black mb-2">Шаг первый</h3>
-                        <p className="text-black/80 leading-relaxed">Оставляете заявку на сайте или по телефону</p>
-                    </div>
-                 </div>
-
-                 {/* Card 02 */}
-                 <div className="bg-yellow-400 rounded-3xl p-8 md:p-10 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
-                    <div className="absolute inset-0 opacity-10" 
-                         style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
-                    </div>
-                    <div className="relative z-10">
-                        <div className="text-6xl font-bold text-white mb-6 opacity-80">02</div>
-                        <h3 className="text-xl font-bold text-black mb-2">Мы свяжемся</h3>
-                        <p className="text-black/80 leading-relaxed">Наш специалист выезжает для оценки и согласования объема работ</p>
-                    </div>
-                 </div>
-
-                 {/* Card 03 */}
-                 <div className="bg-yellow-400 rounded-3xl p-8 md:p-10 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
-                    <div className="absolute inset-0 opacity-10" 
-                         style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
-                    </div>
-                    <div className="relative z-10">
-                        <div className="text-6xl font-bold text-white mb-6 opacity-80">03</div>
-                        <h3 className="text-xl font-bold text-black mb-2">Выполнение работ</h3>
-                        <p className="text-black/80 leading-relaxed">Мы выполняем разметку, сдаём объект в срок, выдаём гарантию</p>
-                    </div>
-                 </div>
-              </div>
-
-           </div>
-        </div>
-      </section>
+      <WorkProcessSection />
 
       {/* FAQ Section */}
       <FAQSection showSectionId={true} />
@@ -485,7 +434,7 @@ export default function App() {
                      className="flex flex-col items-center cursor-pointer group"
                    >
                         <div className="w-[67px] h-[71px] relative mb-1">
-                          <img src="public/images/logo.svg" alt="Streetline Logo" className="w-full h-full object-contain" />
+                          <img src="/images/logo.svg" alt="Streetline Logo" className="w-full h-full object-contain" />
                         </div>
                    </div>
 
@@ -582,7 +531,7 @@ export default function App() {
                     <div className="mb-12">
                         {/* Logo Approximation */}
                          <div className="w-[67px] h-[71px] relative mb-1">
-                          <img src="public/images/logo.svg" alt="Streetline Logo" className="w-full h-full object-contain" />
+                          <img src="//images/logo.svg" alt="Streetline Logo" className="w-full h-full object-contain" />
                         </div>
                     </div>
 

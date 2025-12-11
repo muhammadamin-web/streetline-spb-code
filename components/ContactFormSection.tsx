@@ -2,21 +2,36 @@ import React from 'react';
 import { Phone } from 'lucide-react';
 import { SectionId } from '../types';
 
+// Фоновое изображение по умолчанию для всех страниц
+const DEFAULT_BG_IMAGE = './public/images/bg_image.png';
+
 interface ContactFormSectionProps {
   showSectionId?: boolean;
+  backgroundImage?: string; // Можно передать кастомное изображение
 }
 
-const ContactFormSection: React.FC<ContactFormSectionProps> = ({ showSectionId = false }) => {
+const ContactFormSection: React.FC<ContactFormSectionProps> = ({ 
+  showSectionId = false,
+  backgroundImage = DEFAULT_BG_IMAGE 
+}) => {
   return (
     <section 
       id={showSectionId ? SectionId.CONTACT : undefined} 
-      className="py-24 bg-[#0a0a0a] relative overflow-hidden text-white"
+      className="py-24 relative overflow-hidden text-white"
     >
+      {/* Фоновое изображение */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      />
+      {/* Тёмный оверлей для читаемости текста */}
+      <div className="absolute inset-0 bg-black/70" />
+      
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           
           <div className="lg:w-1/2">
-            <div className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-3">Мы готовы вам помочь</div>
+            <div className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Мы готовы вам помочь</div>
             <h2 className="text-3xl md:text-5xl font-medium mb-12 leading-tight">Обсуждение вашего проекта дорожной разметки</h2>
             
             <div className="flex flex-col sm:flex-row gap-8 mt-12">
